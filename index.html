@@ -5,29 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StopWatch</title>
     <link rel="stylesheet" href="style.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <h1 class="title">StopWatch <i class="fa-solid fa-stopwatch"></i></h1>
     <div class="container">
-        <div class="watch">
-            <div class="outer-circle">
-                <div class="inner-circle">
-                    <span class="text minute">01 :</span>
-                    <span class="text sec">&nbsp;47 :</span>
-                    <span class="text msec">&nbsp;97</span>
-                </div>
-            </div>
-            <div class="button-wrapper">
-                <button class="button">Reset</button>
-                <button class="button">Play</button>
-                <button class="button">Lap</button>
-            </div>
+        <div class="timer-Display">
+            00 : 00 : 00 : 00
         </div>
-        <ul class="laps">
-            <li class="lap-item">
-                <span class="number">#1</span>
-                <span class="time-stamp">01: 43 : 07</span>
-            </li>
-        </ul>
+        <ul class="laps"></ul>
+          <div class="buttons">
+            <button id="startTimer" onclick="start()">Start</button>
+            <button id="pauseTimer" onclick="pause()">Pause</button>
+            <button id="resetTime" onclick="reset()">Reset</button>
+            <button id="restartTimer" onclick="restart()">Restart</button>
+            <button id="lap" onclick="lap()">Lap</button>
+            <button id="resetLap" onclick="resetLap()">Reset Laps</button>
+        </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
